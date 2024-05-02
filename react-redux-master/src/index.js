@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
-import {createStore} from 'redux';
+// import {createStore} from 'redux';
 import {Provider} from 'react-redux'
 import myReducers from './reducers'
-
+import { combineReducers } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 
 //Create the store
 const myStore = createStore(myReducers);
@@ -22,3 +23,5 @@ ReactDOM.render(<Provider store={myStore}><App/></Provider>, document.getElement
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
+
+
